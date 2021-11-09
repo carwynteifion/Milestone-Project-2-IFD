@@ -1,0 +1,4 @@
+/* hides elements that have this class */
+.hidden {
+    display: none;
+}
