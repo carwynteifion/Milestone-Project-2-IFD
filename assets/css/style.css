@@ -1,3 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+/* Centers main container*/
+body {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-color: darkslateblue;
+}
+
+/* Styling for all elements*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+body.correct {
+    background-color: green;
+}
+
+body.wrong {
+    background-color: red;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #fff;
+    width: 800px;
+    max-width: 80%;
+    padding: 10px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.button {
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: 1px solid darkslateblue;
+    background-color: cornflowerblue;
+    color: #fff;
+    outline: none;
+}
+
+.button:hover {
+    border-color: #000;
+}
+
+.button.correct {
+    background-color: green;
+    color: #000;
+}
+
+.button.wrong {
+    background-color: red;
+}
+
+.start-button, .next-button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* hides elements that have this class */
 .hidden {
     display: none;
