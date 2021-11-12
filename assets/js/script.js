@@ -61,7 +61,7 @@ function selectAnswer(e) {
     Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     });
-    if(randomisedQuestions.length > currentQuestion.length + 1) {
+    if(randomisedQuestions.length > currentQuestion + 1) {
     nextButton.classList.remove("hidden");
     } else {
         startButton.innerText = "Restart";
