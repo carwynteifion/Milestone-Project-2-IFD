@@ -47,6 +47,7 @@ function displayQuestion(question) {
 }
 
 function resetState() {
+    clearStatusClass(document.body);
     nextButton.classList.add("hidden");
     while(answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
@@ -64,7 +65,7 @@ function selectAnswer(e) {
     nextButton.classList.remove("hidden");
     } else {
         startButton.innerText = "Restart";
-        startButton.classList.remove ("hidden");
+        nextButton.classList.remove ("hidden");
     }
 };
 
