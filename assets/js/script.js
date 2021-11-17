@@ -16,7 +16,7 @@ nextButton.addEventListener('click', () => {
 });
 
 // QUIZ FUNCTIONS
-// shuffles quiz, sets buttons up
+// shuffles quiz questions, sets buttons up
 function startQuiz() {
     startButton.classList.add("hidden")
     randomisedQuestions = allQuestions.sort(() => Math.random() - .5)
@@ -46,6 +46,7 @@ function displayQuestion(question) {
     })
 }
 
+//
 function resetState() {
     clearStatusClass(document.body);
     nextButton.classList.add("hidden");
@@ -61,14 +62,17 @@ function selectAnswer(e) {
     Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     });
+    //displays next button if number of questions is greater than the current question's number
     if(randomisedQuestions.length > currentQuestion + 1) {
     nextButton.classList.remove("hidden");
+    //else, changes start button text to restart and displays this button instead
     } else {
         startButton.innerText = "Restart";
         nextButton.classList.remove ("hidden");
     }
 };
 
+//runs clearStatusClass then adds either "correct" or "wrong" class to an element
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if(correct) {
@@ -78,6 +82,7 @@ function setStatusClass(element, correct) {
     }
 }
 
+//removes any "correct" or "wrong" classes from elements
 function clearStatusClass(element) {
     element.classList.remove("correct")
     element.classList.remove("wrong");
