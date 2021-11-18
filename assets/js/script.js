@@ -4,9 +4,9 @@ const startButton = document.getElementById("start-button");
 const nextButton = document.getElementById("next-button");
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
-
-// undefined variables for shuffling and tracking questions
+const scoreContainer = document.getElementById("score");
 let randomisedQuestions, currentQuestion;
+let currentScore = 0;
 
 // Event Listeners
 startButton.addEventListener("click", startQuiz);
@@ -18,10 +18,14 @@ nextButton.addEventListener('click', () => {
 // QUIZ FUNCTIONS
 // shuffles quiz questions, sets buttons up
 function startQuiz() {
+    if (startButton.innerText = "Restart") {
+        currentScore = 0;
+    };
     startButton.classList.add("hidden")
     randomisedQuestions = allQuestions.sort(() => Math.random() - .5)
     currentQuestion = 0
     questionContainer.classList.remove("hidden")
+    scoreContainer.innerHTML = `Score so far: ${currentScore}`
     nextQuestion()
 };
 
@@ -35,11 +39,12 @@ function nextQuestion() {
 function displayQuestion(question) {
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
+        //creates a button for each answer
         const button = document.createElement("button")
         button.innerText = answer.text
         button.classList.add("button")
         if(answer.correct) {
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         }
         button.addEventListener("click", selectAnswer)
         answerButtons.appendChild(button)
@@ -69,6 +74,7 @@ function selectAnswer(e) {
     } else {
         startButton.innerText = "Restart";
         nextButton.classList.remove ("hidden");
+        scoreContainer.innerHTML = `You got ${currentScore} questions right!`
     }
 };
 
@@ -87,3 +93,4 @@ function clearStatusClass(element) {
     element.classList.remove("correct")
     element.classList.remove("wrong");
 }
+
