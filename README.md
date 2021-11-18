@@ -99,7 +99,7 @@ Pages all link to each other without issue, and external links open a new tab as
 Family also assisted in testing the site, and reported no major issues.
 
 ### Known Bugs
-
+- Score counter does not update score during quiz, and updates to total question count when quiz ends.
 ### Fixed Bugs
 
 ## Deployment
