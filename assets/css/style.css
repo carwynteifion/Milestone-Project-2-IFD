@@ -10,7 +10,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    background-color: darkslateblue;
+    background-image: url("../img/bg-pub.jpg");
 }
 
 /* Styling for all elements*/
@@ -18,14 +18,6 @@ body {
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: 'Mochiy Pop P One', sans-serif;
-}
-
-body.correct {
-    background-color: green;
-}
-
-body.wrong {
-    background-color: red;
 }
 
 .container {

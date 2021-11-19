@@ -79,7 +79,7 @@ Not Another Pub Quiz is a website designed to entertain the user with a quiz gam
 ### HTML, CSS and JavaScript Validation
 The W3C Markup and CSS Validators, and JSHint JavaScript Validator were used to validate each page to ensure the project was free from errors.
 
-- [W3C Markup Validator Results]()
+- [W3C Markup Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcarwynteifion.github.io%2FMilestone-Project-2-IFD%2F)
 - [W3C CSS Validator Results]()
 - [JSHint JavaScript Validator Results]()
 
@@ -150,6 +150,7 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 ## Credits
+Background image from https://wallpapersafari.com/w/mFlzca
 
 ### Code
 
