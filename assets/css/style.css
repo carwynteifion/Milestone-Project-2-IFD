@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Mochiy+Pop+P+One&display=swap');
 
 /* Centers main container*/
 body {
@@ -18,21 +18,22 @@ body {
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Mochiy Pop P One', sans-serif;
+    font-family: 'Balsamiq Sans', sans-serif;
 }
 
 h1 {
-    color: #2688e4;
+    color: #FFDB58;
 }
 
 .container {
     border-radius: 5px;
-    background-color: #18014e;
+    background-color: #890620;
     width: 800px;
     max-width: 80%;
     padding: 10px;
-    border: 1px solid #fafafa;
+    border: 1px solid #BAB86C;
     text-align: center;
+    font-size: 1.5rem;
 }
 
 /* Answer button grid settings*/
@@ -53,6 +54,7 @@ h1 {
     background-color: cornflowerblue;
     color: #fff;
     outline: none;
+    font-family: "Mochiy Pop P One", sans-serif;
 }
 
 /* changes button border colour when hovered over*/

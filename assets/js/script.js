@@ -1,4 +1,4 @@
-// quiz variables
+// Quiz variables
 const questionContainer = document.getElementById("question-container");
 const startButton = document.getElementById("start-button");
 const nextButton = document.getElementById("next-button");
@@ -19,7 +19,7 @@ nextButton.addEventListener('click', () => {
 });
 
 // QUIZ FUNCTIONS
-// shuffles quiz questions, sets buttons up
+// Shuffles quiz questions, sets buttons up
 function startQuiz() {
     if (startButton.innerText = "Restart") {
         currentScore = 0;
@@ -34,18 +34,18 @@ function startQuiz() {
     nextQuestion()
 };
 
-//displays next question from array
+// Displays next question from array
 function nextQuestion() {
     resetState()
     displayQuestion(randomisedQuestions[currentQuestion])
 };
 
-// handles displaying current question and sets parameters for correct answer button
+// Handles displaying current question and sets parameters for correct answer button
 function displayQuestion(question) {
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
 
-        //creates a button for each answer
+        // Creates a button for each answer
         const button = document.createElement("button")
         button.innerText = answer.text
         button.classList.add("button")
@@ -57,7 +57,7 @@ function displayQuestion(question) {
     })
 }
 
-//clears correct and wrong classes, hides next button, removes default answer buttons
+// Clears correct and wrong classes, hides next button, removes default answer buttons
 function resetState() {
     clearStatusClass(document.body);
     nextButton.classList.add("hidden");
@@ -70,24 +70,24 @@ function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
     
-    // set the colors of the button wrong or right
+    // Set the colors of the button wrong or right
     Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     });
 
-    // if selected button is correct, increments the score
+    // If selected button is correct, increments the score
     if (correct) {
         currentScore++;
     };
     
-    // updates score
+    // Updates score
     scoreContainer.innerHTML = `Score so far: ${currentScore} out of ${currentQuestion + 1}`;
 
-    // displays next button if number of questions is greater than the current question's number
+    // Displays next button if number of questions is greater than the current question's number
     if(randomisedQuestions.length > currentQuestion + 1) {
     nextButton.classList.remove("hidden");
 
-    // else, changes start button text to restart and displays this button instead
+    // Else, changes start button text to restart and displays this button instead
     } else {
         startButton.innerText = "Restart";
         startButton.classList.remove ("hidden");
@@ -99,7 +99,7 @@ function selectAnswer(e) {
     };
 };
 
-// runs clearStatusClass then adds either "correct" or "wrong" class to an element
+// Runs clearStatusClass then adds either "correct" or "wrong" class to an element
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if(correct) {
@@ -109,7 +109,7 @@ function setStatusClass(element, correct) {
     }
 }
 
-// removes any "correct" or "wrong" classes from elements
+// Removes any "correct" or "wrong" classes from elements
 function clearStatusClass(element) {
     element.classList.remove("correct")
     element.classList.remove("wrong");
