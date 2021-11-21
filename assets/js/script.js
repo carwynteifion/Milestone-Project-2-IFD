@@ -5,9 +5,11 @@ const nextButton = document.getElementById("next-button");
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const scoreContainer = document.getElementById("score");
+const highScoreContainer = document.getElementById("high-score")
 const headers = document.getElementById("header-container")
 let randomisedQuestions, currentQuestion;
 let currentScore = 0;
+let highScore = 0;
 
 // Event Listeners
 startButton.addEventListener("click", startQuiz);
@@ -28,6 +30,7 @@ function startQuiz() {
     currentQuestion = 0
     questionContainer.classList.remove("hidden")
     scoreContainer.innerHTML = `Score so far: ${currentScore}`
+    highScoreContainer.innerHTML = `High score: ${highScore}`
     nextQuestion()
 };
 
@@ -85,9 +88,13 @@ function selectAnswer(e) {
     //else, changes start button text to restart and displays this button instead
     } else {
         startButton.innerText = "Restart";
-        nextButton.classList.remove ("hidden");
+        startButton.classList.remove ("hidden");
         scoreContainer.innerHTML = `You got ${currentScore} questions right!`
-    }
+        if (currentScore > highScore) {
+            highScore = currentScore;
+            highScoreContainer.innerHTML = `High score: ${highScore}`;
+        };
+    };
 };
 
 //runs clearStatusClass then adds either "correct" or "wrong" class to an element
