@@ -41,6 +41,7 @@ function nextQuestion() {
 function displayQuestion(question) {
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
+
         //creates a button for each answer
         const button = document.createElement("button")
         button.innerText = answer.text
@@ -53,7 +54,7 @@ function displayQuestion(question) {
     })
 }
 
-//
+//clears correct and wrong classes, hides next button, removes default answer buttons
 function resetState() {
     clearStatusClass(document.body);
     nextButton.classList.add("hidden");
@@ -65,12 +66,22 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
+    
+    // set the colors of the button wrong or right
     Array.from(answerButtons.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     });
+
+    // if selected button is correct, increments the score
+    if (correct) {
+        currentScore++;
+        scoreContainer.innerHTML = `Score so far: ${currentScore}`;
+    };
+
     //displays next button if number of questions is greater than the current question's number
     if(randomisedQuestions.length > currentQuestion + 1) {
     nextButton.classList.remove("hidden");
+
     //else, changes start button text to restart and displays this button instead
     } else {
         startButton.innerText = "Restart";
@@ -83,10 +94,7 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if(correct) {
-        element.classList.add("correct"); debugger;
-        currentScore++;
-        scoreContainer.innerHTML = `Score so far: ${currentScore}`;
-        console.log("current score is", currentScore);
+        element.classList.add("correct");
     } else {
         element.classList.add("wrong")
     }
