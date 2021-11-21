@@ -10,12 +10,14 @@
     <title>Not Another Pub Quiz</title>
 </head>
 <body>
+    <!--main quiz container-->
     <div class="container">
         <div id="header-container">
             <h1 class="header">NOT ANOTHER PUB QUIZ!</h1>
             <h2 id="subtitle">Test your general knowledge with this 30-question pub quiz!</h2>
             <h2 id="press-start">Press start to play!</h2>
         </div>
+        <!--contains quiz question and answers-->
         <div id="question-container" class="hidden">
             <div id="question">What is the answer?</div>
             <div id="answer-buttons" class="button-grid">
@@ -25,12 +27,15 @@
                 <button class="button">ans 4</button>
             </div>
         </div>
+        <!--Start and Next buttons-->
         <div class="controls">
             <button id="start-button" class="start-button button">Start!</button>
             <button id="next-button" class="next-button button hidden">Next</button>
         </div>
+        <!--Score counter-->
         <div id = "score" class="score"></div>
     </div>
+<!--JavaScript sources-->
 <script src="assets/js/questions.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
