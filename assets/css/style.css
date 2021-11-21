@@ -44,6 +44,8 @@ h1 {
     gap: 10px;
 }
 
+/* Button styling*/
+
 .button {
     border-radius: 10px;
     padding: 5px 10px;
@@ -53,11 +55,14 @@ h1 {
     outline: none;
 }
 
+/* changes button border colour when hovered over*/
+
 .button:hover {
     border: 1px solid #000;
 }
 
 /* Classes implemented when answers are revealed as right or wrong*/
+
 .button.correct {
     background-color: green;
     color: #000;
@@ -67,10 +72,13 @@ h1 {
     background-color: red;
 }
 
+/* Styles for start and next buttons*/
+
 .start-button, .next-button {
     font-size: 1.5rem;
     padding: 10px 20px;
 }
+
 
 .controls {
     display: flex;
@@ -78,7 +86,8 @@ h1 {
     align-items: center;
 }
 
-/* hides elements that have this class */
+/* Hides elements that have this class */
+
 .hidden {
     display: none;
 }
