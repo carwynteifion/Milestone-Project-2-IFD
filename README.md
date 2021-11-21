@@ -43,8 +43,10 @@ Not Another Pub Quiz is a website designed to entertain the user with a quiz gam
     - As a first-time user, I want to play the quiz and receive instant feedback on my progress.
     - As a first-time user, I want to restart the quiz easily after I have played it through.
   - Returning Visitor Goals
-
+    - As a returning user, I want to see if the quiz presents any new challenges.
+    - As a returning user, I want to see my score to assess if I did better than last time.
   - Frequent Visitor Goals
+    - As a frequent visitor, I want to see my high score.
 
 - Design
   - Colour Scheme
@@ -94,14 +96,15 @@ The W3C Markup and CSS Validators, and JSHint JavaScript Validator were used to 
 ### Further Testing
 The site has been tested on Chrome, Edge, Firefox and DuckDuckGo on mobile, desktop and tablet devices of varying screen widths.
 
-Pages all link to each other without issue, and external links open a new tab as expected.
+Scripts work as expected and without any known issues.
 
 Family also assisted in testing the site, and reported no major issues.
 
 ### Known Bugs
-- Score counter does not update score during quiz, and updates to total question count when quiz ends.
+- Score counter currently increments irrespective of right or wrong answer.
 ### Fixed Bugs
-
+- Score counter now implemented. This was done by adding the incrementer to the setStatusClass function.
+- Score counter no longer increments more than once. This was done by removing a second call of the function setStatusClass, which itself was left redundant after replacing changing background colours with a static image in the CSS.
 ## Deployment
 
 ### GitHub Pages

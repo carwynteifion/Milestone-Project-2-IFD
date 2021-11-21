@@ -81,8 +81,9 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if(correct) {
-        element.classList.add("correct")
+        element.classList.add("correct"); debugger;
         currentScore++;
+        scoreContainer.innerHTML = `Score so far: ${currentScore}`;
         console.log(currentScore);
     } else {
         element.classList.add("wrong")
