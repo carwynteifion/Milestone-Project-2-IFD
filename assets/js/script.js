@@ -5,6 +5,7 @@ const nextButton = document.getElementById("next-button");
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const scoreContainer = document.getElementById("score");
+const headers = document.getElementById("header-container")
 let randomisedQuestions, currentQuestion;
 let currentScore = 0;
 
@@ -21,7 +22,8 @@ function startQuiz() {
     if (startButton.innerText = "Restart") {
         currentScore = 0;
     };
-    startButton.classList.add("hidden")
+    startButton.classList.add("hidden");
+    headers.classList.add("hidden");
     randomisedQuestions = allQuestions.sort(() => Math.random() - .5)
     currentQuestion = 0
     questionContainer.classList.remove("hidden")
@@ -84,7 +86,7 @@ function setStatusClass(element, correct) {
         element.classList.add("correct"); debugger;
         currentScore++;
         scoreContainer.innerHTML = `Score so far: ${currentScore}`;
-        console.log(currentScore);
+        console.log("current score is", currentScore);
     } else {
         element.classList.add("wrong")
     }

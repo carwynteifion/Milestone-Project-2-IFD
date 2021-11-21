@@ -10,7 +10,8 @@ body {
     width: 100vw;
     height: 100vh;
     background-size: cover;
-    background-image: url("../img/bg-pub.jpg");
+    background: url("../img/bg-pub.jpg") center center;
+    color: #fafafa;
 }
 
 /* Styling for all elements*/
@@ -20,13 +21,21 @@ body {
     font-family: 'Mochiy Pop P One', sans-serif;
 }
 
+h1 {
+    color: #2688e4;
+}
+
 .container {
     border-radius: 5px;
-    background-color: #fff;
+    background-color: #18014e;
     width: 800px;
     max-width: 80%;
     padding: 10px;
+    border: 1px solid #fafafa;
+    text-align: center;
 }
+
+/* Answer button grid settings*/
 
 .button-grid {
     display: grid;
@@ -45,9 +54,10 @@ body {
 }
 
 .button:hover {
-    border-color: #000;
+    border: 1px solid #000;
 }
 
+/* Classes implemented when answers are revealed as right or wrong*/
 .button.correct {
     background-color: green;
     color: #000;
