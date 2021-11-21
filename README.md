@@ -54,7 +54,7 @@ Not Another Pub Quiz is a website designed to entertain the user with a quiz gam
   - Typography
     - 
   - Imagery
-    - 
+    - As it is a pub quiz, the background image of a pub bar ties in nicely with this theme.
 
 - Wireframes
   [Desktop], [Mobile], [Tablet]
