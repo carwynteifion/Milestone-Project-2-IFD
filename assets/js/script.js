@@ -78,18 +78,20 @@ function selectAnswer(e) {
     // if selected button is correct, increments the score
     if (correct) {
         currentScore++;
-        scoreContainer.innerHTML = `Score so far: ${currentScore}`;
     };
+    
+    // updates score
+    scoreContainer.innerHTML = `Score so far: ${currentScore} out of ${currentQuestion + 1}`;
 
-    //displays next button if number of questions is greater than the current question's number
+    // displays next button if number of questions is greater than the current question's number
     if(randomisedQuestions.length > currentQuestion + 1) {
     nextButton.classList.remove("hidden");
 
-    //else, changes start button text to restart and displays this button instead
+    // else, changes start button text to restart and displays this button instead
     } else {
         startButton.innerText = "Restart";
         startButton.classList.remove ("hidden");
-        scoreContainer.innerHTML = `You got ${currentScore} questions right!`
+        scoreContainer.innerHTML = `You got ${currentScore} questions out of ${currentQuestion + 1} right!`
         if (currentScore > highScore) {
             highScore = currentScore;
             highScoreContainer.innerHTML = `High score: ${highScore}`;
@@ -97,7 +99,7 @@ function selectAnswer(e) {
     };
 };
 
-//runs clearStatusClass then adds either "correct" or "wrong" class to an element
+// runs clearStatusClass then adds either "correct" or "wrong" class to an element
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if(correct) {
@@ -107,7 +109,7 @@ function setStatusClass(element, correct) {
     }
 }
 
-//removes any "correct" or "wrong" classes from elements
+// removes any "correct" or "wrong" classes from elements
 function clearStatusClass(element) {
     element.classList.remove("correct")
     element.classList.remove("wrong");
