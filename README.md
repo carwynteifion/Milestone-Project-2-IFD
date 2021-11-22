@@ -50,14 +50,15 @@ Not Another Pub Quiz is a website designed to entertain the user with a quiz gam
 
 - Design
   - Colour Scheme
-    - 
+    - The colour scheme includes burgundy, mustard yellow and olive green, with off-white text. This links well to the colours in the pub background and ties in to the rustic theme. The buttons are a neutral cornflower blue to stand out from the underlying theme colours, and change colour to red or green depending on correct or incorrect answers being revealed.
   - Typography
-    - 
+    - The fonts chosen are Balsamiq Sans for the headers, questions and score counters, and Mochiy Pop P One for the quiz button elements. Balsamiq Sans is ideal for conveying information about the site to the user while also giving a fun stylistic effect, while Mochiy Pop P One is a little bolder and more wacky to lean in to the quiz theme.
   - Imagery
-    - As it is a pub quiz, the background image of a pub bar ties in nicely with this theme.
+    - As it is a pub quiz, the background image of a pub bar is thematically consistent.
 
 - Wireframes
-  [Desktop], [Mobile], [Tablet]
+  - Title - [Desktop](/assets/wireframes/Title-Desktop.png), [Mobile](/assets/wireframes/Title-Mobile.png), [Tablet](/assets/wireframes/Title-Tablet.png)
+  - Quiz - [Desktop](/assets/wireframes/Quiz-Desktop.png), [Mobile](/assets/wireframes/Quiz-Mobile.png), [Tablet](/assets/wireframes/Quiz-Tablet.png)
 
 ## Features
 - Responsive on mobile, tablet and desktop sizes
@@ -82,7 +83,7 @@ Not Another Pub Quiz is a website designed to entertain the user with a quiz gam
 The W3C Markup and CSS Validators, and JSHint JavaScript Validator were used to validate each page to ensure the project was free from errors.
 
 - [W3C Markup Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcarwynteifion.github.io%2FMilestone-Project-2-IFD%2F)
-- [W3C CSS Validator Results]()
+- [W3C CSS Validator Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcarwynteifion.github.io%2FMilestone-Project-2-IFD%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - [JSHint JavaScript Validator Results]()
 
 ### Testing User Stories from UX Section
