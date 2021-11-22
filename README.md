@@ -17,7 +17,7 @@ Not Another Pub Quiz is a website designed to entertain the user with a quiz gam
   - [Languages Used](#languages-used)
   - [Frameworks, Libraries and Programs Used](#frameworks-libraries-and-programs-used)
 
-4. [Testing](testing)
+4. [Testing](#testing)
   - [HTML, CSS and JavaScript Validation](#html-css-and-javascript-validation)
   - [Testing User Stories from UX Section](#testing-user-stories-from-ux-section)
   - [Further Testing](#further-testing)
