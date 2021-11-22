@@ -44,7 +44,6 @@ Not Another Pub Quiz is a website designed to entertain the user with a quiz gam
     - c. As a first-time user, I want to restart the quiz easily after I have played it through.
   - Returning Visitor Goals
     - a. As a returning user, I want to see if the quiz presents any new challenges.
-    - b. As a returning user, I want to see my score to assess if I did better than last time.
   - Frequent Visitor Goals
     - a. As a frequent visitor, I want to see my high score so I can compare to how I am currently doing.
 
@@ -94,13 +93,25 @@ The W3C Markup and CSS Validators, and JSHint JavaScript Validator were used to 
 
 - First Time Visitor Goals
   - a. As a first-time user, I want to establish the nature of the site and explore its contents.
+    - i. The site's title and subheading establishes its purpose as a pub quiz app, as well as informing the user of the number of questions.
+    - ii. The invitation to press start, as well as the large "Start!" call to action button, directs the user in how to initiate the quiz.
+  <h2 align="center"><img src="assets/img/screenshot1.png"></h2>
+    - iii. The background image is of a pub bar, again communicating to the user the purpose of the site as a pub quiz app.
+
   - b. As a first-time user, I want to play the quiz and receive instant feedback on my progress.
+    - i. The user can click the Start button to initiate the quiz, and is then presented with a randomly-chosen question from the question array.
+    - ii. Upon selecting an answer, the quiz reveals to the user which answer was correct and which were incorrect, using a change in background colour of the buttons to either green or red to indicate correct or incorrect respectively.
+    - iii. The score counter increments if the answer was correct and also displays how many questions have been answered correctly out of the total number answered so far.
+    - iv. After taking time to assess which answer was correct and which were incorrect, the user can then click the Next button which appears after an answer is selected. This presents a new randomly-chosen question.
+    - v. This process repeats until the number of questions in the randomised array equals the number of the question last answered. The user is presented with a final score, the high score is updated if it is lower than the current score, and the user may restart the quiz using the restart button.
   - c. As a first-time user, I want to restart the quiz easily after I have played it through.
+    - i. The restart button appears after the last question in the array is answered, allowing the user to try again for a better score.
 - Returning Visitor Goals
   - a. As a returning user, I want to see if the quiz presents any new challenges.
-  - b. As a returning user, I want to see my score to assess if I did better than last time.
+    - i. While the questions are the same each time, they are presented to the user at random. The user is likely to expect the same order but will be thrown off when the questions are presented in a new order.
 - Frequent Visitor Goals
   - a. As a frequent visitor, I want to see my high score so I can compare to how I am currently doing.
+    - i. The high score is updated at the end of each quiz round if the current score is higher than the high score's current value. The user can review the high score while taking the quiz at any time.
 
 
 ### Further Testing
