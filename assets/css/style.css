@@ -22,7 +22,12 @@ body {
 }
 
 h1 {
+    font-size: 2rem;
     color: #FFDB58;
+}
+
+h2 {
+    font-size: 1.5rem;
 }
 
 .container {
