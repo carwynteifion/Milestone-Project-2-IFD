@@ -39,20 +39,20 @@ Not Another Pub Quiz is a website designed to entertain the user with a quiz gam
 ## User Experience
 - User stories
   - First Time Visitor Goals
-    - As a first-time user, I want to establish the nature of the site and explore its contents.
-    - As a first-time user, I want to play the quiz and receive instant feedback on my progress.
-    - As a first-time user, I want to restart the quiz easily after I have played it through.
+    - a. As a first-time user, I want to establish the nature of the site and explore its contents.
+    - b. As a first-time user, I want to play the quiz and receive instant feedback on my progress.
+    - c. As a first-time user, I want to restart the quiz easily after I have played it through.
   - Returning Visitor Goals
-    - As a returning user, I want to see if the quiz presents any new challenges.
-    - As a returning user, I want to see my score to assess if I did better than last time.
+    - a. As a returning user, I want to see if the quiz presents any new challenges.
+    - b. As a returning user, I want to see my score to assess if I did better than last time.
   - Frequent Visitor Goals
-    - As a frequent visitor, I want to see my high score.
+    - a. As a frequent visitor, I want to see my high score so I can compare to how I am currently doing.
 
 - Design
   - Colour Scheme
     - The colour scheme includes burgundy, mustard yellow and olive green, with off-white text. This links well to the colours in the pub background and ties in to the rustic theme. The buttons are a neutral cornflower blue to stand out from the underlying theme colours, and change colour to red or green depending on correct or incorrect answers being revealed.
   - Typography
-    - The fonts chosen are Balsamiq Sans for the headers, questions and score counters, and Mochiy Pop P One for the quiz button elements. Balsamiq Sans is ideal for conveying information about the site to the user while also giving a fun stylistic effect, while Mochiy Pop P One is a little bolder and more wacky to lean in to the quiz theme.
+    - The fonts chosen are Balsamiq Sans for the headers, questions and score counters, and Mochiy Pop P One for the quiz button elements. Balsamiq Sans is ideal for conveying information about the site to the user while also giving a fun stylistic effect, while Mochiy Pop P One is a little bolder and more wacky to lean in to the quiz theme. Sans serif is used as a backup for both.
   - Imagery
     - As it is a pub quiz, the background image of a pub bar is thematically consistent.
 
@@ -72,8 +72,8 @@ Not Another Pub Quiz is a website designed to entertain the user with a quiz gam
 
 ### Frameworks, Libraries and Programs used
 1. [Balsamiq Wireframes](https://balsamiq.com/wireframes/) - used in the design process to draw the site's wireframes.
-2. [Google Fonts](https://fonts.google.com/) - used to import the Noto Sans JP and Exo fonts.
-3. [Font Awesome](https://fontawesome.com/) - used to add icons on each page of the site to improve UX.
+2. [Google Fonts](https://fonts.google.com/) - used to import the Mochiy Pop P One and Balsamiq Sans fonts.
+3. [Font Awesome](https://fontawesome.com/) - used to add an icon to the page to improve UX.
 4. [Git](https://gitpod.io/) - used for version control via Gitpod. The terminal was used to commit and push code to GitHub.
 5. [GitHub](https://www.github.com/) - used to store the project's pushed code from Git.
 
@@ -84,15 +84,24 @@ The W3C Markup and CSS Validators, and JSHint JavaScript Validator were used to 
 
 - [W3C Markup Validator Results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcarwynteifion.github.io%2FMilestone-Project-2-IFD%2F)
 - [W3C CSS Validator Results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcarwynteifion.github.io%2FMilestone-Project-2-IFD%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-- [JSHint JavaScript Validator Results]()
+- JSHint JavaScript Validator returned no errors, and the following metrics:
+  - There are 11 functions in this file.
+  - Function with the largest signature take 2 arguments, while the median is 1.
+  - Largest function has 14 statements in it, while the median is 2.
+  - The most complex function has a cyclomatic complexity value of 4 while the median is 1.
 
 ### Testing User Stories from UX Section
 
-  - First Time Visitor Goals
+- First Time Visitor Goals
+  - a. As a first-time user, I want to establish the nature of the site and explore its contents.
+  - b. As a first-time user, I want to play the quiz and receive instant feedback on my progress.
+  - c. As a first-time user, I want to restart the quiz easily after I have played it through.
+- Returning Visitor Goals
+  - a. As a returning user, I want to see if the quiz presents any new challenges.
+  - b. As a returning user, I want to see my score to assess if I did better than last time.
+- Frequent Visitor Goals
+  - a. As a frequent visitor, I want to see my high score so I can compare to how I am currently doing.
 
-  - Returning Visitor Goals
-
-  - Frequent Visitor Goals
 
 ### Further Testing
 The site has been tested on Chrome, Edge, Firefox and DuckDuckGo on mobile, desktop and tablet devices of varying screen widths.
@@ -102,10 +111,12 @@ Scripts work as expected and without any known issues.
 Family also assisted in testing the site, and reported no major issues.
 
 ### Known Bugs
-- Score counter currently increments irrespective of right or wrong answer.
+- No currently known bugs.
 ### Fixed Bugs
 - Score counter now implemented. This was done by adding the incrementer to the setStatusClass function.
 - Score counter no longer increments more than once. This was done by removing a second call of the function setStatusClass, which itself was left redundant after replacing changing background colours with a static image in the CSS.
+- Score counter now increments only when a correct answer is selected. This was fixed by moving the incrementer out of the forEach on line 74 and into its own if(correct) function.
+- Font Awesome icon was made visible by moving font styling from * to body.
 ## Deployment
 
 ### GitHub Pages
@@ -154,7 +165,6 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 ## Credits
-Background image from https://wallpapersafari.com/w/mFlzca
 
 ### Code
 
@@ -164,10 +174,12 @@ All code was written by the developer.
 
 ### Media
 
+- Background image from https://wallpapersafari.com/w/mFlzca
+- Favicon from https://favicon.io/emoji-favicons/beer-mug/
+
 ### Acknowledgements
 
-My mentor, Chris, for giving the best encouragement and feedback as always
-
-My fiancee, Isadora, and her mum, Kay, for UX/bug testing this site.
-
+- My mentor, Chris, for giving the best encouragement and feedback as always.
+- Ed and Sean from Tutor Support for guidance on building my score counter.
+- My fiancée, Isadora, for UX/bug testing this site.
 [Back to top](#not-another-pub-quiz)

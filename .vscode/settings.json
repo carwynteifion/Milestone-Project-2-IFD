@@ -24,4 +24,5 @@
    "workbench.colorTheme": "Visual Studio Dark",
    "terminal.integrated.gpuAcceleration": "canvas",
    "editor.defaultFormatter": "HookyQR.beautify"
+   "jshint.options": {"esversion": 6},
 }

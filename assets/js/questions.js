@@ -301,4 +301,4 @@ const allQuestions = [
         ],
         category: "sportLeisure"
     },
-]
+];
