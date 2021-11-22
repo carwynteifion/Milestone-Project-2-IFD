@@ -21,7 +21,7 @@ nextButton.addEventListener('click', () => {
 // QUIZ FUNCTIONS
 // Shuffles quiz questions, sets buttons up
 function startQuiz() {
-    if (startButton.innerText = "Restart") {
+    if (startButton.innerText === "Restart") {
         currentScore = 0;
     }
     startButton.classList.add("hidden");
