@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Mochiy+Pop+P+One&display=swap');
 
+
 /* Centers main container*/
 body {
     align-items: center;
@@ -12,13 +13,13 @@ body {
     background-size: cover;
     background: url("../img/bg-pub.jpg") center center;
     color: #fafafa;
+    font-family: 'Balsamiq Sans', sans-serif;
 }
 
 /* Styling for all elements*/
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Balsamiq Sans', sans-serif;
 }
 
 h1 {
