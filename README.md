@@ -203,7 +203,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Content
 
-All code was written by the developer.
+- Icon in title header credited to [Font Awesome](https://fontawesome.com)
+- Mockups were drawn up using [Balsamiq Wireframes](https://balsamiq.com)
 
 ### Media
 
@@ -214,5 +215,5 @@ All code was written by the developer.
 
 - My mentor, Chris, for giving the best encouragement and feedback as always.
 - Ed and Sean from Tutor Support for guidance on building my score counter.
-- My fiancée, Isadora, for UX/bug testing this site.
+- My fiancée, Isadora, and her mum, Kay, for UX/bug testing this site.
 [Back to top](#not-another-pub-quiz)
